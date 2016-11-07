@@ -1,11 +1,11 @@
-<?php include_once('header.php'); ?>
-<body>
-
-<?php include('menu.php'); ?>
+<?php
+$title = 'Login';
+include_once('header.php');
+?>
 
 <form style="margin-left:20px;" action = "login_validate.php" method = "get" name="login_form">
 
-	<h1>Please Login to MyTimer</h1>
+	<h2>Please Login to MyTimer</h2>
 	<p>If you just registered, your login information is needed again.
 		If you have not registered, please <a  class="btn btn-secondary" href="register_form.php">Register now</a></p>
 	<hr/>

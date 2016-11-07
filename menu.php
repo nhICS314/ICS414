@@ -22,7 +22,7 @@
                 <a class="nav-link" href="register_form.php">Register</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="backups/forgot_form.php">Forgot Password</a>
+                <a class="nav-link" href="forgot_form.php">Forgot Password</a>
             </li>
             <?php
         }
