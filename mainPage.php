@@ -52,7 +52,7 @@ else
 
 <h1>Welcome to MyTimer!</h1>
 <br><br>
-<p>To purchase a seat please <a class="btn btn-secondary" href="register_form.php">register</a> or <a class="btn btn-primary" href="login_form.php">log in</a>.</p>
+<p>To user MyTimer please  <a class="btn btn-secondary" href="register_form.php">register</a> or <a class="btn btn-primary" href="login_form.php">log in</a>.</p>
 <?php
 
 }
