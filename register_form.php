@@ -1,18 +1,14 @@
-<?php  session_start(); ?>
-<?php include_once('dbConnection.php'); ?>
+<?php
+$title = 'Register';
+include_once('header.php');
+include_once('dbConnection.php');
 
-<html>
-<head>
-<title>Register</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css" integrity="sha384-2hfp1SzUoho7/TsGGGDaFdsuuDL0LX2hnUp6VkX3CUQ2K4K+xjboZdsXyp4oUHZj" crossorigin="anonymous">
+?>
 
-</head>
-<body>
-<?php include('menu.php'); ?>
 
 <form style="margin-left:20px;" method="get" action="register_validate.php">
 
-	<h1>Please Register</h1>
+	<h2>Please Register</h2>
 	<div class="form-group row">
 		<label for="FullName" class="col-xs-2 form-control-label">Name: </label>
 		<div class="col-xs-4">
