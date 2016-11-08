@@ -42,7 +42,7 @@ if($registration = mysql_fetch_assoc($EmployeeQuery))
             while ($entry = mysql_fetch_array($TaskQuery))
             {
         ?>
-                <h3>Task Name:  <?=$entry["TaskName"] ?></h3>
+                <h3>Task Name:  <a class="btn btn-secondary btn-lg" href="display_task_detail.php?taskid=<?=$entry["TaskID"] ?>"><?=$entry["TaskName"] ?></a></h3>
                 <h6>Task Details:</h6>
                 <p><?php echo $entry["TaskDetails"] ?></p>
                 <h6>Task Date:</h6>
