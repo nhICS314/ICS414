@@ -42,16 +42,16 @@ if($registration = mysql_fetch_assoc($EmployeeQuery))
             while ($entry = mysql_fetch_array($TaskQuery))
             {
         ?>
-                <h6>Task Name:</h6>
-                <p><?php echo $entry["taskName"] ?></p>
+                <h3>Task Name:  <?=$entry["TaskName"] ?></h3>
                 <h6>Task Details:</h6>
-                <p><?php echo $entry["taskDetails"] ?></p>
+                <p><?php echo $entry["TaskDetails"] ?></p>
                 <h6>Task Date:</h6>
-                <p><?php echo $entry["taskDate"] ?></p>
+                <p><?php echo $entry["TaskDate"] ?></p>
                 <h6>Task Priority:</h6>
-                <p><?php echo $entry["taskPriority"] ?></p>
+                <p><?php echo $entry["TaskPriority"] ?></p>
                 <h6>Task assigned to:</h6>
-                <p><?php echo $entry["taskEmployee"] ?></p>
+                <p><?php echo $entry["TaskEmployeeID"] ?></p>
+				<hr/>
         <?php
             }
         ?>
