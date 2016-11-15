@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="pom.css" />
-    <script type="text/javascript" src="pom.js"></script>
     <title>Pomodoro</title>
 </head>
 <body>
@@ -20,6 +19,6 @@
     <button id="settings">settings</button><br/><br/>
     <button id="rev">submit for review</button><br/>
 </div>
-<script type="text/javascript" src="script/pom.js"></script>
+<script type="text/javascript" src="pom.js"></script>
 </body>
 </html>
