@@ -8,7 +8,6 @@ var secs;
 
 var countdownID;
 
-
 var minutes = document.getElementById("minutes");
 var seconds = document.getElementById("seconds");
 
@@ -79,7 +78,6 @@ function startTimer() {
     stop.style.display = "block";
     reset.style.display = "none";
 }
-
 // stop timer
 function stopTimer() {
 
@@ -91,12 +89,13 @@ function stopTimer() {
     stop.style.display = "none";
     reset.style.display = "block";
 }
-
 // reset timer
 function resetTimer() {
     // reset big time
     bigTime = 1499;
-
+    // displays the original time 25mins
+    minutes.innerHTML = "25";
+    seconds.innerHTML = "00";
     // show start button
     start.style.display = "block";
     stop.style.display = "none";
