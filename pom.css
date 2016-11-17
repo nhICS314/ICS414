@@ -43,3 +43,7 @@ body{
 #stop, #reset {
     display:none;
 }
+
+p{
+    text-align: left;
+}

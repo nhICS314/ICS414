@@ -9,7 +9,26 @@
 
 <div id="task">
     <u>Task Details</u>
-    <br/>
+    <?php
+    $task = 'N/A';
+    if (isset($_REQUEST['task'])){
+        $taskid = $_REQUEST['task'];
+    }
+    $title = 'Task Detail for Task ID: '.$task;
+    if (isset($_REQUEST['task'])) {
+        include_once('dbConnection.php');
+        ?>
+        <?php
+        $sql = "SELECT TaskName, TaskDetails FROM TASK WHERE TaskID='$task'";
+        $returnQuery = @mysql_query($sql, $conn) or die("Couldn't perform query $sql (" . __LINE__ . "): " . @mysql_error() . '.');
+
+        if ($taskReturned = @mysql_fetch_assoc($returnQuery)) {
+            $taskName = $taskReturned['TaskName'];
+            $taskDetails = $taskReturned['TaskDetails'];
+        }
+    }?>
+    <p>Task Name: <? echo $taskName;?><br/>
+    Task Details: <? $taskDetails; ?></p>
 </div>
 <div id="container">
     <div id="timer">
