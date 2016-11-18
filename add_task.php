@@ -56,13 +56,13 @@ $returnQuery = mysql_query($sql, $conn) or die("Couldn't perform query $sql ("._
     <div class="form-group row">
         <label for="EmployeeName" class="col-xs-2 form-control-label">Employee: </label>
         <div class="col-xs-4">
-            <select class="form-control" name="EmployeeName">
+            <select class="form-control" name="EmployeeID">
                 <?php
                 while ($entry = mysql_fetch_array($returnQuery))
                 {
 
                     ?>
-                    <option value="<?php echo $entry["EmployeeName"] ?>"><?php echo $entry["EmployeeName"] ?></option>
+                    <option value="<?php echo $entry["EmployeeID"] ?>"><?php echo $entry["EmployeeName"] ?></option>
                     <?php
                 }
                 ?>
