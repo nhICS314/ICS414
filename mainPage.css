@@ -1,0 +1,38 @@
+/* Main Page CSS */
+.addtask {
+    margin: auto;
+    width: 46px;
+    display: block;
+}
+
+.taskTitle {
+    text-align: center;
+}
+
+.taskBlock {
+    border: 1px solid #e6e6e6;
+    padding: 10px;
+    margin: 20px auto;
+    background-color: #f2f2f2;
+    word-wrap: break-word;
+}
+
+.taskBlockBot {
+    height: 35px;
+}
+
+.taskBlockBotL {
+    float: left;
+}
+
+.taskBlockBotR {
+    float: right;
+}
+
+.taskContainer {
+    padding: 10px 20px;
+}
+
+.topBar {
+    padding: 0px 20px;
+}

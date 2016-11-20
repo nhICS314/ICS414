@@ -7,7 +7,7 @@
         if (isset($_SESSION['id'])) {
             $name = $_SESSION['name'];
             echo '<li class="nav-item">';
-            echo ' <a href="#" class="nav-link">View Task Board</a> ';
+            echo ' <a href="mainPage.php" class="nav-link">View Task Board</a> ';
             echo '</li>';
             echo '<li class="nav-item">';
             echo '  <a href="#" class="nav-link">Pomodoro Timer</a> ';
