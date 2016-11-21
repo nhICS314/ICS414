@@ -28,7 +28,7 @@ $sql="SELECT * FROM TASK WHERE TaskStatus='TODO'";
 $ToDoTaskQuery = mysql_query($sql, $conn) or die("Couldn't perform query $sql (".__LINE__."): " . mysql_error() . '.');
 
 // Used to return tasks that are IN PROGRESS
-$sql="SELECT * FROM TASK WHERE TaskStatus='IN PROGRESS'";
+$sql="SELECT * FROM TASK WHERE TaskStatus like 'IN_PROGRESS%'";
 $InProgressTaskQuery = mysql_query($sql, $conn) or die("Couldn't perform query $sql (".__LINE__."): " . mysql_error() . '.');
 
 // Used to return tasks that are in REVIEW
@@ -36,7 +36,7 @@ $sql="SELECT * FROM TASK WHERE TaskStatus='REVIEW'";
 $ReviewTaskQuery = mysql_query($sql, $conn) or die("Couldn't perform query $sql (".__LINE__."): " . mysql_error() . '.');
 
 // Used to return tasks that are COMPLETE
-$sql="SELECT * FROM TASK WHERE TaskStatus='COMPLETE'";
+$sql="SELECT * FROM TASK WHERE TaskStatus='DONE'";
 $CompleteTaskQuery = mysql_query($sql, $conn) or die("Couldn't perform query $sql (".__LINE__."): " . mysql_error() . '.');
 
 // If user is logged in, they can view the task board
@@ -106,6 +106,7 @@ if($registration = mysql_fetch_assoc($EmployeeUserQuery))
 						<h4><?=$entry["TaskName"] ?></h4>
 						<hr />
 						<p><?php echo $entry["TaskDetails"] ?></p>
+						<p><?php echo $entry["TaskStatus"] ?></p>
 						<hr />
 						<div class="taskBlockBot">
 							<div class="taskBlockBotL">

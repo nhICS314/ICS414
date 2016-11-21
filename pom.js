@@ -1,5 +1,11 @@
 "use strict";
 
+const  TODO = 'TODO';
+const  IN_PROGRESS_BREAK = 'IN_PROGRESS_BREAK';
+const  IN_PROGRESS_SPRINT = 'IN_PROGRESS_SPRINT';
+const  REVIEW = 'REVIEW';
+const  DONE = 'DONE';
+
 var bigTime = 1499;
 var percent;
 
@@ -19,6 +25,7 @@ stop.addEventListener("click", stopTimer, false);
 
 var reset = document.getElementById("reset");
 reset.addEventListener("click", resetTimer, false);
+
 
 function counter() {
 
@@ -54,9 +61,13 @@ function counter() {
             seconds.innerHTML = "00";
 
             // show start button
-            start.style.display = "block";
+            /*start.style.display = "block";
             stop.style.display = "none";
-            reset.style.display = "none";
+            reset.style.display = "none";*/
+
+            enableButtonById('#start');
+            disableButtonById('#reset');
+            disableButtonById('#stop');
 
             // stop timer
             clearInterval(countdownID);
@@ -74,9 +85,27 @@ function startTimer() {
     countdownID = setInterval("counter()", 1000);
 
     // show stop button
-    start.style.display = "none";
+   /* start.style.display = "none";
     stop.style.display = "block";
     reset.style.display = "none";
+    */
+    var taskId = $("#taskId").text();
+
+   $.get( "task_update_status.php?taskid=" + taskId + "&newStatus=" + IN_PROGRESS_SPRINT);
+
+
+    enableButtonById('#stop');
+    disableButtonById('#reset');
+    disableButtonById('#start');
+
+    /*
+     IN_PROGRESS_BREAK
+     IN_PROGRESS_SPRINT
+     TODO
+     DONE
+     REVIEW
+     */
+
 }
 // stop timer
 function stopTimer() {
@@ -85,10 +114,41 @@ function stopTimer() {
     clearInterval(countdownID);
 
     // show reset button
-    start.style.display = "none";
+    /*start.style.display = "none";
     stop.style.display = "none";
     reset.style.display = "block";
+    */
+
+    var taskId = $("#taskId").text();
+
+
+    $.get( "task_update_status.php?taskdd=" + taskId + "&newStatus=" + IN_PROGRESS_BREAK);
+    enableButtonById('#start');
+    enableButtonById('#reset');
+    disableButtonById('#stop');
+
+    /*$('#start').removeClass('disabled');
+    $('#stop').addClass('disabled');
+
+    $('#reset').removeClass('disabled');
+    */
+
 }
+
+function enableButtonById(buttonId){
+    $(buttonId).removeClass('disabled');
+    $(buttonId).removeClass('btn-secondary');
+    $(buttonId).addClass('btn-primary');
+}
+
+function disableButtonById(buttonId){
+
+    $(buttonId).removeClass('btn-primary');
+    $(buttonId).addClass('btn-secondary');
+    $(buttonId).addClass('disabled');
+}
+
+
 // reset timer
 function resetTimer() {
     // reset big time
@@ -97,9 +157,14 @@ function resetTimer() {
     minutes.innerHTML = "25";
     seconds.innerHTML = "00";
     // show start button
-    start.style.display = "block";
+
+    /*start.style.display = "block";
     stop.style.display = "none";
-    reset.style.display = "none";
+    reset.style.display = "none";*/
+
+    enableButtonById('#start');
+    disableButtonById('#reset');
+    disableButtonById('#stop');
 }
 
 

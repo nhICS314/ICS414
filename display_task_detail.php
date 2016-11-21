@@ -59,6 +59,37 @@ if (isset($_REQUEST['taskid'])) {
 
 ?>
 
+<a class="btn btn-secondary" href="mainPage.php">Back to Task Board</a>
+
+<?php
+
+/*
+IN_PROGRESS_BREAK
+     IN_PROGRESS_SPRINT
+     TODO
+     DONE
+     REVIEW
+*/
+
+if (strcmp($taskStatus,'DONE') == 0){ // same for IN_PROGRESS
+    // just show main page button
+} else if (strcmp($taskStatus,'REVIEW') == 0 ){
+    ?>
+
+    <a class="btn btn-primary" href="mark_complete_validate.php?taskid=<?=$taskid?>">Mark As Completed</a>
+    <?php
+
+} else if (strcmp($taskStatus,'TODO' ) == 0 ){
+    ?>
+    <a class="btn btn-primary" href="pomodoro.php?taskid=$taskid">Select Task</a>
+    <?php
+}
+
+
+// <a class="btn btn-primary" href="login_form.php">log in</a>
+
+?>
+
 <?php include_once('footer.php'); ?>
 
 </body>

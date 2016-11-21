@@ -9,12 +9,15 @@
             echo '<li class="nav-item">';
             echo ' <a href="mainPage.php" class="nav-link">View Task Board</a> ';
             echo '</li>';
+
+            /*
             echo '<li class="nav-item">';
             echo '  <a href="#" class="nav-link">Pomodoro Timer</a> ';
             echo '</li>';
             echo '<li class="nav-item">';
             echo '  <a href="#" class="nav-link">Settings</a> ';
             echo '</li>';
+            */
 
         } else {
             ?>
@@ -28,9 +31,7 @@
         }
         ?>
 
-        <li class="nav-item">
-            <a href="mainPage.php" class="nav-link">Main</a>
-        </li>
+
         <li class="nav-item">
             <?php
             if (isset($_SESSION['id'])) {
