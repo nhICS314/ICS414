@@ -81,7 +81,7 @@ if (strcmp($taskStatus,'DONE') == 0){ // same for IN_PROGRESS
 
 } else if (strcmp($taskStatus,'TODO' ) == 0 ){
     ?>
-    <a class="btn btn-primary" href="pomodoro.php?taskid=$taskid">Select Task</a>
+    <a class="btn btn-primary" href="pomodoro.php?taskid=<?=$taskid?>">Select Task</a>
     <?php
 }
 

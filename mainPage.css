@@ -9,6 +9,15 @@
     text-align: center;
 }
 
+.IN_PROGRESS_SPRINT {
+    background-color: #ff8787 !important;;
+}
+
+.IN_PROGRESS_BREAK {
+    background-color: #6ede6d !important;
+}
+
+
 .taskBlock {
     border: 1px solid #e6e6e6;
     padding: 10px;

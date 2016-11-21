@@ -102,11 +102,11 @@ if($registration = mysql_fetch_assoc($EmployeeUserQuery))
 						$EmployeeNameQuery = mysql_query($sql, $conn) or die("Couldn't perform query $sql (".__LINE__."): " . mysql_error() . '.');
 						$name = mysql_fetch_array($EmployeeNameQuery)
 				?>
-			  		<div class="taskBlock">
+			  		<div class="taskBlock <?php echo $entry["TaskStatus"] ?>">
 						<h4><?=$entry["TaskName"] ?></h4>
 						<hr />
 						<p><?php echo $entry["TaskDetails"] ?></p>
-						<p><?php echo $entry["TaskStatus"] ?></p>
+
 						<hr />
 						<div class="taskBlockBot">
 							<div class="taskBlockBotL">
